@@ -3,12 +3,19 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
          https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.bitvelocity</groupId>
+  <groupId>com.bit.velocity</groupId>
   <artifactId>bv-platform-bom</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>1.0.0</version>
   <packaging>pom</packaging>
   <name>BitVelocity BOM</name>
 
+  <distributionManagement>
+    <repository>
+      <id>github</id>
+      <name>GitHub Packages</name>
+      <url>https://maven.pkg.github.com/nitinkc/bv-platform-bom</url>
+    </repository>
+  </distributionManagement>
   <dependencyManagement>
     <dependencies>
       <!-- Core -->
