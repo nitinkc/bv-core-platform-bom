@@ -6,10 +6,12 @@ name: Maven Package
 on:
   release:
     types: [created]
+  push:
+    branches:
+      - main
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -17,13 +19,16 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: Set up JDK 11
+    - name: Set up JDK 11 and Maven settings
       uses: actions/setup-java@v4
       with:
         java-version: '11'
         distribution: 'temurin'
-        server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
-        settings-path: ${{ github.workspace }} # location for the settings.xml file
+        server-id: github
+        settings-path: ${{ github.workspace }}
+
+    - name: Show generated settings.xml
+      run: cat $GITHUB_WORKSPACE/settings.xml
 
     - name: Build with Maven
       run: mvn -B package --file pom.xml
