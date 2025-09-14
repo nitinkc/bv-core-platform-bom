@@ -4,7 +4,7 @@
          https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.bit.velocity</groupId>
-  <artifactId>bv-platform-bom</artifactId>
+  <artifactId>bv-core-platform-bom</artifactId>
   <version>1.0.0</version>
   <packaging>pom</packaging>
   <name>BitVelocity BOM</name>
@@ -13,7 +13,7 @@
     <repository>
       <id>github</id>
       <name>GitHub Packages</name>
-      <url>https://maven.pkg.github.com/nitinkc/bv-platform-bom</url>
+      <url>https://maven.pkg.github.com/nitinkc/bv-core-platform-bom</url>
     </repository>
   </distributionManagement>
   <dependencyManagement>
