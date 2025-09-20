@@ -1,17 +1,11 @@
 ﻿# bv-platform-bom
 
-If using local machine to push the atrifact, use settings.xml of .github.
+Using [Jitpack](https://jitpack.io/) to avoid publishing the artifact
 
-If using github's default file, ensure the the project name matches the artifact name : [Commit](https://github.com/nitinkc/bv-core-platform-bom/commit/03901fce6184a8e34bc4f0b84f8ce5e96d4d60b6)
+Create a release and let `maven-publish` from github action do the rest.
 
-```xml
-<settings>
-  <servers>
-    <server>
-      <id>github</id>
-      <username><github_id></username>
-      <password><PAT></password>
-    </server>
-  </servers>
-</settings>
+Check Effective POM
+
+```sh
+mvn help:effective-pom
 ```
