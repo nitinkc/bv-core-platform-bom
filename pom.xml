@@ -1,13 +1,16 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-         https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.bit.velocity</groupId>
   <artifactId>bv-core-platform-bom</artifactId>
-  <version>1.0.1</version>
+  <version>1.0.2</version>
   <packaging>pom</packaging>
   <name>BitVelocity BOM</name>
+  <description>Bill of Materials for BitVelocity Core Platform</description>
+  <properties>
+    <spring-boot-dependencies.version>4.0.0-M3</spring-boot-dependencies.version>
+  </properties>
 
   <parent>
     <groupId>org.springframework.boot</groupId>
@@ -26,12 +29,18 @@
   <dependencyManagement>
     <dependencies>
       <!-- Core -->
+      <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-dependencies -->
       <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-dependencies</artifactId>
-        <version>3.3.3</version>
+        <version>${spring-boot-dependencies.version}</version>
         <type>pom</type>
         <scope>import</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <optional>true</optional>
       </dependency>
       <!-- Observability -->
       <dependency>
