@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.bit.velocity</groupId>
   <artifactId>bv-core-platform-bom</artifactId>
-  <version>1.0.2</version>
+  <version>1.0.4</version>
   <packaging>pom</packaging>
   <name>BitVelocity BOM</name>
   <description>Bill of Materials for BitVelocity Core Platform</description>
@@ -40,7 +40,6 @@
       <dependency>
         <groupId>org.projectlombok</groupId>
         <artifactId>lombok</artifactId>
-        <optional>true</optional>
       </dependency>
       <!-- Observability -->
       <dependency>
