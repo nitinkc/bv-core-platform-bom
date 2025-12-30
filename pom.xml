@@ -48,6 +48,34 @@
         <type>pom</type>
         <scope>import</scope>
       </dependency>
+      <!-- Kafka -->
+      <dependency>
+        <groupId>org.springframework.kafka</groupId>
+        <artifactId>spring-kafka</artifactId>
+        <version>3.3.0-M1</version>
+      </dependency>
+      <!-- gRPC -->
+      <dependency>
+        <groupId>io.grpc</groupId>
+        <artifactId>grpc-bom</artifactId>
+        <version>1.60.0</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <!-- Pact for Contract Testing -->
+      <dependency>
+        <groupId>au.com.dius.pact.consumer</groupId>
+        <artifactId>junit5</artifactId>
+        <version>4.6.0</version>
+        <scope>test</scope>
+      </dependency>
+      <!-- OWASP Dependency Check -->
+      <dependency>
+        <groupId>org.owasp</groupId>
+        <artifactId>dependency-check-maven</artifactId>
+        <version>9.0.0</version>
+        <type>maven-plugin</type>
+      </dependency>
       <!-- Testcontainers -->
       <dependency>
         <groupId>org.testcontainers</groupId>
